@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo"><i class="fas fa-film"></i>CineCritique</h1>
+                <button id="addMovieBtn" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add New Movie
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Discover & Review Movies</h2>
+            <p>Share your thoughts on the latest films and read reviews from other movie enthusiasts.</p>
+        </section>
+
+        <section class="movies-section">
+            <h2>Featured Movies</h2>
+            <div id="moviesContainer" class="movies-grid">
+                <!-- Movies will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Movie Modal -->
+    <div id="addMovieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Movie</h2>
+            <form id="movieForm">
+                <div class="form-group">
+                    <label for="title">Movie Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="3" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseYear">Release Year</label>
+                        <input type="number" id="releaseYear" min="1900" max="2024" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="director">Director</label>
+                    <input type="text" id="director" required>
+                </div>
+                <div class="form-group">
+                    <label for="posterUrl">Poster URL</label>
+                    <input type="url" id="posterUrl">
+                </div>
+                <button type="submit" class="btn-primary">Add Movie</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Movie Details Modal -->
+    <div id="movieDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-details">&times;</span>
+            <div id="movieDetailsContent">
+                <!-- Movie details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CineCritique. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

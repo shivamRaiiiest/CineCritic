@@ -1,0 +1,29 @@
+{
+    "name": "movie-review-website",
+    "version": "1.0.0",
+    "description": "Movie Review Website with MERN Stack",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "dev": "nodemon server/server.js",
+        "seed": "node server/seed.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.18.2",
+        "mongoose": "^7.5.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "keywords": [
+        "movie",
+        "review",
+        "express",
+        "mongodb",
+        "nodejs"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}
